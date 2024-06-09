@@ -5,41 +5,26 @@ xml.send()
 xml.onreadystatechange=function(){
   if(this.readyState===4 && this.status===200){
 var data = (JSON.parse(this.response)) 
-data.forEach(element => console.log(`Name: ${element.name.common}\nFlag: ${element.flag}\nflag link: ${element.flags.png}\nCapital: ${element.capital}`))
+data.forEach(element => console.log(`Name: ${element.name.common}\nFlag: ${element.flag}\nflag img link: ${element.flags.png}\nCapital: ${element.capital}`))
   }
 }
 
 /* sample output
-Name: Slovenia
-Flag: 🇸🇮
-flag link: https://flagcdn.com/w320/si.png
-Capital: Ljubljana debugger eval code:8:33
-Name: Tokelau
-Flag: 🇹🇰
-flag link: https://flagcdn.com/w320/tk.png
-Capital: Fakaofo debugger eval code:8:33
-Name: Uzbekistan
-Flag: 🇺🇿
-flag link: https://flagcdn.com/w320/uz.png
-Capital: Tashkent debugger eval code:8:33
-Name: Zimbabwe
-Flag: 🇿🇼
-flag link: https://flagcdn.com/w320/zw.png
-Capital: Harare debugger eval code:8:33
-Name: Togo
-Flag: 🇹🇬
-flag link: https://flagcdn.com/w320/tg.png
-Capital: Lomé debugger eval code:8:33
-Name: Central African Republic
-Flag: 🇨🇫
-flag link: https://flagcdn.com/w320/cf.png
-Capital: Bangui debugger eval code:8:33
-Name: United Arab Emirates
-Flag: 🇦🇪
-flag link: https://flagcdn.com/w320/ae.png
-Capital: Abu Dhabi debugger eval code:8:33
-Name: Zambia
-Flag: 🇿🇲
-flag link: https://flagcdn.com/w320/zm.png
-Capital: Lusaka
+
+Name: Netherlands
+Flag: 🇳🇱
+flag img link: https://flagcdn.com/w320/nl.png
+Capital: Amsterdam debugger eval code:8:33
+Name: Burkina Faso
+Flag: 🇧🇫
+flag img link: https://flagcdn.com/w320/bf.png
+Capital: Ouagadougou debugger eval code:8:33
+Name: Indonesia
+Flag: 🇮🇩
+flag img link: https://flagcdn.com/w320/id.png
+Capital: Jakarta debugger eval code:8:33
+Name: Austria
+Flag: 🇦🇹
+flag img link: https://flagcdn.com/w320/at.png
+Capital: Vienna
   */
