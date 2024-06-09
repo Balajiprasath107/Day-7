@@ -5,126 +5,113 @@ xml.send()
 xml.onreadystatechange=function(){
   if(this.readyState===4 && this.status===200){
 var data = (JSON.parse(this.response)) 
-var asianCountries = data.filter(element =>element.region==="Asia" && element.continents.includes("Asia")).map(element=>element.altSpellings).sort()
+var asianCountries = data.filter(element =>element.region==="Asia" && element.continents.includes("Asia")).map(element=>element.name.common).sort()
 console.log(asianCountries)
 
   }
 }
 
 /* output
-  Array(49) [ (3) […], (2) […], (4) […], (3) […], (3) […], (3) […], (4) […], (2) […], (7) […], (2) […], … ]
+  
+Array(49) [ "Afghanistan", "Armenia", "Azerbaijan", "Bahrain", "Bangladesh", "Bhutan", "Brunei", "Cambodia", "China", "Georgia", … ]
 ​
-0: Array(3) [ "AE", "UAE", "Emirates" ]
+0: "Afghanistan"
 ​
-1: Array [ "AF", "Afġānistān" ]
+1: "Armenia"
 ​
-2: Array(4) [ "AM", "Hayastan", "Republic of Armenia", … ]
+2: "Azerbaijan"
 ​
-3: Array(3) [ "AZ", "Republic of Azerbaijan", "Azərbaycan Respublikası" ]
+3: "Bahrain"
 ​
-4: Array(3) [ "BD", "People's Republic of Bangladesh", "Gônôprôjatôntri Bangladesh" ]
+4: "Bangladesh"
 ​
-5: Array(3) [ "BH", "Kingdom of Bahrain", "Mamlakat al-Baḥrayn" ]
+5: "Bhutan"
 ​
-6: Array(4) [ "BN", "Brunei Darussalam", "Nation of Brunei", … ]
+6: "Brunei"
 ​
-7: Array [ "BT", "Kingdom of Bhutan" ]
+7: "Cambodia"
 ​
-8: Array(7) [ "CN", "Zhōngguó", "Zhongguo", … ]
+8: "China"
 ​
-9: Array [ "GE", "Sakartvelo" ]
+9: "Georgia"
 ​
-10: Array [ "HK" ]
+10: "Hong Kong"
 ​
-11: Array(3) [ "ID", "Republic of Indonesia", "Republik Indonesia" ]
+11: "India"
 ​
-12: Array(3) [ "IL", "State of Israel", "Medīnat Yisrā'el" ]
+12: "Indonesia"
 ​
-13: Array(5) [ "IN", "Bhārat", "Republic of India", … ]
+13: "Iran"
 ​
-14: Array(3) [ "IQ", "Republic of Iraq", "Jumhūriyyat al-‘Irāq" ]
+14: "Iraq"
 ​
-15: Array(4) [ "IR", "Islamic Republic of Iran", "Iran, Islamic Republic of", … ]
+15: "Israel"
 ​
-16: Array(3) [ "JO", "Hashemite Kingdom of Jordan", "al-Mamlakah al-Urdunīyah al-Hāshimīyah" ]
+16: "Japan"
 ​
-17: Array(3) [ "JP", "Nippon", "Nihon" ]
+17: "Jordan"
 ​
-18: Array(5) [ "KG", "Киргизия", "Kyrgyz Republic", … ]
+18: "Kazakhstan"
 ​
-19: Array [ "KH", "Kingdom of Cambodia" ]
+19: "Kuwait"
 ​
-20: Array(8) [ "KP", "Democratic People's Republic of Korea", "DPRK", … ]
+20: "Kyrgyzstan"
 ​
-21: Array(5) [ "KR", "Korea, Republic of", "Republic of Korea", … ]
+21: "Laos"
 ​
-22: Array(3) [ "KW", "State of Kuwait", "Dawlat al-Kuwait" ]
+22: "Lebanon"
 ​
-23: Array(8) [ "KZ", "Qazaqstan", "Казахстан", … ]
+23: "Macau"
 ​
-24: Array(4) [ "LA", "Lao", "Lao People's Democratic Republic", … ]
+24: "Malaysia"
 ​
-25: Array(3) [ "LB", "Lebanese Republic", "Al-Jumhūrīyah Al-Libnānīyah" ]
+25: "Maldives"
 ​
-26: Array(3) [ "LK", "ilaṅkai", "Democratic Socialist Republic of Sri Lanka" ]
+26: "Mongolia"
 ​
-27: Array(4) [ "MM", "Burma", "Republic of the Union of Myanmar", … ]
+27: "Myanmar"
 ​
-28: Array [ "MN" ]
+28: "Nepal"
 ​
-29: Array(6) [ "MO", "澳门", "Macao", … ]
+29: "North Korea"
 ​
-30: Array(4) [ "MV", "Maldive Islands", "Republic of the Maldives", … ]
+30: "Oman"
 ​
-31: Array [ "MY" ]
+31: "Pakistan"
 ​
-32: Array(3) [ "NP", "Federal Democratic Republic of Nepal", "Loktāntrik Ganatantra Nepāl" ]
+32: "Palestine"
 ​
-33: Array(3) [ "OM", "Sultanate of Oman", "Salṭanat ʻUmān" ]
+33: "Philippines"
 ​
-34: Array(3) [ "PH", "Republic of the Philippines", "Repúblika ng Pilipinas" ]
+34: "Qatar"
 ​
-35: Array(4) [ "PK", "Pākistān", "Islamic Republic of Pakistan", … ]
+35: "Saudi Arabia"
 ​
-36: Array(4) [ "PS", "Palestine, State of", "State of Palestine", … ]
-​​
-0: "PS"
-​​
-1: "Palestine, State of"
-​​
-2: "State of Palestine"
-​​
-3: "Dawlat Filasṭin"
-​​
-length: 4
-​​
-<prototype>: Array []
+36: "Singapore"
 ​
-37: Array(3) [ "QA", "State of Qatar", "Dawlat Qaṭar" ]
+37: "South Korea"
 ​
-38: Array(4) [ "SG", "Singapura", "Republik Singapura", … ]
+38: "Sri Lanka"
 ​
-39: Array(3) [ "SY", "Syrian Arab Republic", "Al-Jumhūrīyah Al-ʻArabīyah As-Sūrīyah" ]
+39: "Syria"
 ​
-40: Array(4) [ "Saudi", "SA", "Kingdom of Saudi Arabia", … ]
+40: "Taiwan"
 ​
-41: Array(6) [ "TH", "Prathet", "Thai", … ]
+41: "Tajikistan"
 ​
-42: Array(5) [ "TJ", "Toçikiston", "Republic of Tajikistan", … ]
+42: "Thailand"
 ​
-43: Array [ "TM" ]
+43: "Turkey"
 ​
-44: Array(4) [ "TR", "Turkiye", "Republic of Turkey", … ]
+44: "Turkmenistan"
 ​
-45: Array(6) [ "TW", "Táiwān", "Republic of China", … ]
+45: "United Arab Emirates"
 ​
-46: Array(4) [ "UZ", "Republic of Uzbekistan", "O‘zbekiston Respublikasi", … ]
+46: "Uzbekistan"
 ​
-47: Array(4) [ "VN", "Socialist Republic of Vietnam", "Cộng hòa Xã hội chủ nghĩa Việt Nam", … ]
+47: "Vietnam"
 ​
-48: Array(3) [ "YE", "Yemeni Republic", "al-Jumhūriyyah al-Yamaniyyah" ]
+48: "Yemen"
 ​
 length: 49
-​
-<prototype>: Array []
   */
